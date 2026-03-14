@@ -3,7 +3,7 @@ import pandas as pd
 from src.data_processing import build_training_data
 from src.train_model import compare_models, make_candidate_models, select_best_model
 
-
+ 
 def test_compare_models_returns_expected_columns():
     feature_frame, target = build_training_data()
     fast_models = make_candidate_models(fast_mode=True)
