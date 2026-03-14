@@ -1,0 +1,16 @@
+[
+  "tests/test_data_processing.py::test_build_training_data_has_no_target_in_features",
+  "tests/test_data_processing.py::test_dataset_quality_summary_mentions_removed_columns",
+  "tests/test_data_processing.py::test_derived_features_are_recomputed",
+  "tests/test_data_processing.py::test_make_prediction_frame_has_expected_columns",
+  "tests/test_data_processing.py::test_prepare_model_dataframe_removes_leakage_columns",
+  "tests/test_input_validation.py::test_aberrant_but_possible_values_generate_warning",
+  "tests/test_input_validation.py::test_hla_incoherence_generates_warning",
+  "tests/test_input_validation.py::test_out_of_range_age_is_an_error",
+  "tests/test_input_validation.py::test_valid_record_has_no_error",
+  "tests/test_model_selection.py::test_compare_models_is_sorted_by_roc_auc",
+  "tests/test_model_selection.py::test_compare_models_returns_expected_columns",
+  "tests/test_model_selection.py::test_select_best_model_returns_first_row_name",
+  "tests/test_prediction_logger.py::test_append_prediction_adds_row",
+  "tests/test_prediction_logger.py::test_initialize_workbook_creates_file"
+]
