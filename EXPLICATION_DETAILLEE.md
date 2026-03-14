@@ -1,5 +1,5 @@
 # Explication détaillée du projet corrigé
-
+ 
 Ce document explique **fichier par fichier** la logique du projet refait.  
 Pour rester lisible, l'explication est faite par **petits blocs de lignes** plutôt que par une phrase isolée pour chacune des 1700+ lignes.  
 Chaque bloc correspond à quelques lignes contiguës qui travaillent ensemble.
