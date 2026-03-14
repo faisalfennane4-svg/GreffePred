@@ -73,29 +73,37 @@ streamlit run app/app.py
 
 ```
 GreffePred/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
 ├── app/
-│   └── app.py                        Interface Streamlit principale
+│   └── app.py
 ├── src/
-│   ├── data_processing.py            Chargement et préparation des données
-│   ├── train_model.py                Entraînement et comparaison des modèles
-│   ├── input_validation.py           Validation du formulaire clinique
-│   └── prediction_logger.py          Journalisation Excel des prédictions
+│   ├── data_processing.py
+│   ├── input_validation.py
+│   ├── prediction_logger.py
+│   └── train_model.py
 ├── data/
-│   ├── bone_marrow.csv               Dataset (187 patients, 37 variables)
-│   ├── best_model.joblib             Modèle entraîné (généré automatiquement)
-│   ├── model_comparison.csv          Comparaison des modèles ML
-│   ├── global_feature_importance.csv Importance globale des features
-│   └── user_predictions.xlsx         Historique des prédictions
+│   ├── bone_marrow.csv
+│   ├── bone-marrow.arff
+│   ├── best_model.joblib
+│   ├── model_comparison.csv
+│   ├── global_feature_importance.csv
+│   ├── background_reference.csv
+│   ├── training_summary.json
+│   └── user_predictions.xlsx
 ├── tests/
-│   ├── test_data_processing.py       Tests unitaires données
-│   ├── test_input_validation.py      Tests validation formulaire
-│   ├── test_model_selection.py       Tests sélection modèle
-│   └── test_prediction_logger.py     Tests journalisation Excel
-├── .github/workflows/
-│   └── ci.yml                        Pipeline CI/CD GitHub Actions
+│   ├── test_data_processing.py
+│   ├── test_input_validation.py
+│   ├── test_model_selection.py
+│   └── test_prediction_logger.py
+├── __pycache__/
+├── .pytest_cache/
+├── conftest.py
 ├── Dockerfile
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
