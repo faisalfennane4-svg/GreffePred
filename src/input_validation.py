@@ -1,4 +1,4 @@
-"""
+""" 
 Validation des entrées utilisateur.
 
 Cette couche évite deux problèmes :
