@@ -1,173 +1,202 @@
-# 🩺 GreffePred — Prédiction du succès des greffes de moelle osseuse pédiatriques
+# GreffePred — Aide à la Décision Médicale
 
-> **Coding Week 09-15 Mars 2026 — Centrale Casablanca**
-> Application d'aide à la décision médicale avec ML explicable (SHAP)
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.32+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3+-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-5.18+-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+
+**Prédiction du succès des greffes de moelle osseuse pédiatriques**
+
+Machine Learning · SHAP · Interface Médicale Streamlit
+
+Ecole Centrale Casablanca — Coding Week — Mars 2026
 
 ---
 
-## 🚀 Démarrage rapide
+## Equipe
 
+| Nom | Prénom |
+|-----|--------|
+| FENNANE | Faisal |
+| JANNEN | Ahlem |
+| MAAYZOU | Ikram |
+| EL AMRANI | Aberrazak |
+| SAME | Abel |
+
+---
+
+## Description
+
+GreffePred est une application d'aide à la décision clinique destinée aux médecins spécialisés en greffe de moelle osseuse pédiatrique. Elle prédit la probabilité de succès d'une greffe à partir des données pré-opératoires du patient et du donneur, en s'appuyant sur des algorithmes de Machine Learning entraînés sur le dataset [Bone Marrow Transplant Children (UCI, 187 patients)](https://archive.ics.uci.edu/dataset/565/bone+marrow+transplant+children).
+
+### Fonctionnalités principales
+
+- Connexion médecin sécurisée avec authentification
+- Formulaire clinique complet avec validation des saisies en temps réel
+- Jauge interactive Plotly — probabilité de survie en temps réel
+- Explication SHAP locale — facteurs qui influencent chaque prédiction
+- Courbe de sensibilité à l'âge — analyse de l'impact de l'âge du receveur
+- Comparaison des modèles ML — RandomForest, ExtraTrees, GradientBoosting
+- Historique Excel — chaque prédiction est sauvegardée et téléchargeable
+
+---
+
+## Installation et Lancement
+
+### Prérequis
+- Python 3.9+
+
+### Etape 1 — Installer les dépendances
 ```bash
-# 1. Installer les dépendances
 pip install -r requirements.txt
+```
 
-# 2. Entraîner le modèle (crée data/best_model.pkl)
+### Etape 2 — Entraîner le modèle
+```bash
 python src/train_model.py
+```
 
-# 3. (Optionnel) Générer le SHAP summary plot
-python src/evaluate_model.py
-
-# 4. Lancer l'application
+### Etape 3 — Lancer l'application
+```bash
 streamlit run app/app.py
 ```
 
-> ⚠️ **Important** : toujours lancer les commandes depuis la **racine du projet** (là où se trouve ce README).
+### Connexion
+| Champ | Valeur |
+|-------|--------|
+| Utilisateur | `medecin` |
+| Mot de passe | `demo1234` |
 
 ---
 
-## 🗂️ Architecture
+## Structure du projet
 
 ```
-project/
-├── data/
-│   ├── bone-marrow.arff       # Dataset brut UCI
-│   ├── bone_marrow.csv        # Dataset converti en CSV
-│   ├── best_model.pkl         # Modèle entraîné (généré)
-│   ├── feature_names.pkl      # Noms des features (généré)
-│   └── shap_summary.png       # SHAP plot global (généré)
-├── notebooks/
-│   └── eda.ipynb              # Analyse exploratoire complète
-├── src/
-│   ├── data_processing.py     # Pipeline prétraitement + optimize_memory()
-│   ├── train_model.py         # Comparaison et entraînement des modèles
-│   └── evaluate_model.py      # Métriques + SHAP
+GreffePred/
 ├── app/
-│   └── app.py                 # Interface Streamlit
+│   └── app.py                        Interface Streamlit principale
+├── src/
+│   ├── data_processing.py            Chargement et préparation des données
+│   ├── train_model.py                Entraînement et comparaison des modèles
+│   ├── input_validation.py           Validation du formulaire clinique
+│   └── prediction_logger.py          Journalisation Excel des prédictions
+├── data/
+│   ├── bone_marrow.csv               Dataset (187 patients, 37 variables)
+│   ├── best_model.joblib             Modèle entraîné (généré automatiquement)
+│   ├── model_comparison.csv          Comparaison des modèles ML
+│   ├── global_feature_importance.csv Importance globale des features
+│   └── user_predictions.xlsx         Historique des prédictions
 ├── tests/
-│   └── test_data_processing.py
+│   ├── test_data_processing.py       Tests unitaires données
+│   ├── test_input_validation.py      Tests validation formulaire
+│   ├── test_model_selection.py       Tests sélection modèle
+│   └── test_prediction_logger.py     Tests journalisation Excel
 ├── .github/workflows/
-│   └── ci.yml                 # Pipeline CI/CD GitHub Actions
-├── conftest.py                # Configuration pytest
-├── requirements.txt
+│   └── ci.yml                        Pipeline CI/CD GitHub Actions
 ├── Dockerfile
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 📊 Réponses aux questions critiques
+## Modèles Machine Learning
 
-### 1. Le dataset était-il équilibré ?
+| Modèle | Description |
+|--------|-------------|
+| RandomForest | Forêt aléatoire avec class_weight=balanced |
+| ExtraTrees | Arbres extrêmement aléatoires |
+| GradientBoosting | Boosting par gradient |
 
-**Non**, légèrement déséquilibré :
-- Classe 0 (décès) : **102 patients (54.5%)**
-- Classe 1 (survie) : **85 patients (45.5%)**
-- Ratio : **1.2×**
+Le meilleur modèle est sélectionné automatiquement par validation croisée (5-fold, métrique : ROC-AUC).
 
-**Points notables :**
-- **81 valeurs manquantes** sur 12 colonnes (`extcGvHD` : 31 NaN, `CMVstatus` : 16 NaN)
-- **Valeurs 1000000** = données censurées dans les colonnes temporelles → remplacées par NaN
+### Variables utilisées
 
-**Stratégie** : SMOTE + `class_weight='balanced'` dans les modèles  
-**Impact** : Meilleur rappel sur la classe minoritaire, ROC-AUC amélioré de ~5%
+Les variables post-greffe sont volontairement exclues pour éviter la fuite d'information :
 
----
+Variables exclues : `survival_time`, `ANCrecovery`, `PLTrecovery`, `Relapse`, `aGvHDIIIIV`
 
-### 2. Quel modèle a obtenu les meilleures performances ?
-
-| Modèle        | ROC-AUC | Accuracy | Précision | Rappel | F1-score |
-|---------------|---------|----------|-----------|--------|----------|
-| Random Forest | 0.78    | 0.76     | 0.77      | 0.79   | 0.78     |
-| XGBoost       | 0.80    | 0.78     | 0.79      | 0.80   | 0.79     |
-| SVM           | 0.75    | 0.73     | 0.74      | 0.75   | 0.74     |
-| **LightGBM**  | **0.82**| **0.80** | **0.81**  | **0.82**| **0.81**|
-
-✅ **LightGBM** sélectionné pour son meilleur ROC-AUC en validation croisée.
+Variables utilisées : `Recipientage`, `Donorage`, `HLAmatch`, `CD34kgx10d6`, `Disease`, `CMVstatus`
 
 ---
 
-### 3. Quelles features influencent le plus les prédictions (SHAP) ?
-
-1. **CD34kgx10d6** — dose cellules CD34+ par kg (impact fort positif)
-2. **Rbodymass** — masse corporelle du receveur
-3. **survival_time** — temps de survie
-4. **HLAmatch** — compatibilité HLA donneur/receveur
-5. **Donorage** — âge du donneur
-6. **Disease** — type de maladie (ALL, AML, etc.)
-7. **CMVstatus** — statut CMV combiné
-
----
-
-### 4. Prompt Engineering — Tâche documentée
-
-**Tâche choisie** : Fonction `optimize_memory(df)`
-
-**Prompt initial :**
-```
-Écris une fonction Python `optimize_memory(df)` qui prend un DataFrame pandas
-et réduit son empreinte mémoire en convertissant float64 en float32 et int64 en int32.
-Retourne une copie sans modifier l'original. Ajoute une docstring claire.
-```
-
-**Problème identifié** : La première version modifiait aussi les colonnes object/category,
-provoquant des erreurs de type.
-
-**Prompt amélioré :**
-```
-Même fonction, mais en ajoutant ces contraintes :
-- Opérer UNIQUEMENT sur les colonnes numériques (float64, int64)
-- Ignorer complètement les colonnes de type object, category, bool
-- Ne jamais modifier le DataFrame original (utiliser .copy())
-- Ajouter un paramètre optionnel exclude_cols=[] pour exclure des colonnes spécifiques
-```
-
-**Résultat** : Code directement utilisable, sans modification.
-**Enseignement** : Spécifier explicitement ce que la fonction ne doit PAS faire
-est aussi important que ce qu'elle doit faire.
-
----
-
-## 🧪 Tests
+## Tests
 
 ```bash
-# Depuis la racine du projet
-pytest tests/ -v
+pytest tests -v
 ```
 
-Tests inclus :
-- Gestion des valeurs manquantes (imputation)
-- `optimize_memory()` — réduction mémoire, types, conservation des valeurs
-- Encodage des variables catégorielles
-- Gestion des outliers (IQR)
-- Chargement et prédiction du modèle
+4 familles de tests :
+- Traitement des données
+- Validation des saisies utilisateur
+- Sélection du modèle
+- Journalisation Excel
 
 ---
 
-## 🐳 Docker
+## Docker
 
 ```bash
 docker build -t greffepred .
 docker run -p 8501:8501 greffepred
-# → http://localhost:8501
 ```
 
 ---
 
-## ✅ Checklist des livrables
+## Dataset
 
-- [x] Code structuré et professionnel
-- [x] EDA documentée (notebooks/eda.ipynb)
-- [x] Gestion déséquilibre (SMOTE + class_weight)
-- [x] 4 modèles comparés (RandomForest, XGBoost, SVM, LightGBM)
-- [x] SHAP intégré (summary plot + explications locales)
-- [x] Interface Streamlit intuitive
-- [x] CI/CD GitHub Actions (tests + Docker)
-- [x] `optimize_memory()` implémentée et testée
-- [x] Tests automatisés pytest (13 tests)
-- [x] Dockerfile
-- [x] Prompt engineering documenté
-- [x] Reproductible avec 3 commandes
+| Attribut | Valeur |
+|----------|--------|
+| Source | UCI Machine Learning Repository |
+| Patients | 187 |
+| Variables | 37 |
+| Cible | `survival_status` (0/1) |
+| Lien | [UCI Dataset #565](https://archive.ics.uci.edu/dataset/565/bone+marrow+transplant+children) |
 
 ---
 
-*Centrale Casablanca — Coding Week Mars 2026*
+## Avertissement clinique
+
+Cette application est un outil d'aide à la décision destiné à un usage académique et de recherche. Elle ne remplace en aucun cas le jugement clinique d'un médecin spécialisé. Toute décision médicale doit être prise par des professionnels de santé qualifiés.
+
+---
+
+Ecole Centrale Casablanca — Coding Week — Mars 2026 — Projet 4
+
+---
+
+## Guide d'utilisation
+
+### Etape 1 — Connexion
+Lancez l'application et connectez-vous avec les identifiants medecin / demo1234.
+
+### Etape 2 — Saisie du dossier clinique
+Dans la barre laterale gauche, remplissez les informations du patient reparties en 5 sections :
+
+- Donnees du receveur : age, poids, sexe, groupe sanguin, statut CMV
+- Donnees du donneur : age, sexe, groupe sanguin, statut CMV
+- Compatibilite immunologique : compatibilite HLA, differences antigeniques et alleliques
+- Parametres de la greffe : source des cellules souches, dose CD34+, dose CD3+
+- Informations administratives : identifiant patient, note clinique libre
+
+Les variables derivees (ABOmatch, CMVstatus, HLAmismatch, etc.) sont calculees automatiquement.
+
+### Etape 3 — Lancer l'analyse
+Cliquez sur le bouton **Analyser le dossier** dans l'onglet **Nouveau dossier**.
+
+### Etape 4 — Interpreter le resultat
+Rendez-vous dans l'onglet **Resultat clinique** :
+
+- La jauge affiche la probabilite de survie de 0 a 100%
+- Le niveau de risque est indique : Favorable (>= 70%), Intermediaire (45-70%), Eleve (< 45%)
+- Le graphique SHAP montre les 10 variables qui ont le plus influence la prediction
+- La courbe de sensibilite montre comment la probabilite evolue selon l'age du receveur
+
+### Etape 5 — Consulter les analyses globales
+L'onglet **Analyses du modele** presente :
+
+- Le tableau comparatif des modeles ML avec leur AUC respectif
+- L'importance globale des variables sur l'ensemble du dataset
+
+### Etape 6 — Historique
+L'onglet **Historique Excel** affiche toutes les predictions enregistrees. Vous pouvez telecharger le fichier Excel complet via le bouton de telechargement.
