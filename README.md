@@ -1,8 +1,4 @@
-# GreffePred — version corrigée
-
-Cette refonte corrige les problèmes principaux du projet initial :
-
-- l'interface demandait des # GreffePred — Aide à la Décision Médicale
+# GreffePred — Aide à la Décision Médicale
    
 ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
