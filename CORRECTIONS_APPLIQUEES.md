@@ -6,7 +6,7 @@
 - ajout d'une connexion médecin ; 
 - ajout d'un historique Excel ;
 - ajout de tests sur les aberrations de saisie ;
-- ajout de tests de sélection de modèle ;
+- ajout de tests de sélection de modèle ; 
 - ajout de tests de qualité des données ;
 - ajout de tests de journalisation Excel ;
 - ajout d'une vue analytique du modèle ;
