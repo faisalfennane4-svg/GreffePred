@@ -2,7 +2,7 @@
   "tests/test_data_processing.py::test_build_training_data_has_no_target_in_features",
   "tests/test_data_processing.py::test_dataset_quality_summary_mentions_removed_columns",
   "tests/test_data_processing.py::test_derived_features_are_recomputed",
-  "tests/test_data_processing.py::test_make_prediction_frame_has_expected_columns",
+  "tests/test_data_processing.py::test_make_prediction_frame_has_expected_columns", 
   "tests/test_data_processing.py::test_prepare_model_dataframe_removes_leakage_columns",
   "tests/test_input_validation.py::test_aberrant_but_possible_values_generate_warning",
   "tests/test_input_validation.py::test_hla_incoherence_generates_warning",
