@@ -1,7 +1,7 @@
 """
 Journalisation des prédictions dans un fichier Excel.
 """
-
+ 
 from __future__ import annotations
 
 from datetime import datetime
