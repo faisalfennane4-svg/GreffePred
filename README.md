@@ -217,7 +217,7 @@ variables redondantes ou incohérentes ;
 - la prédiction pouvait sembler presque constante parce que les mauvaises variables dominaient ;
 - aucune vraie base de données locale n'enregistrait les dossiers saisis.
 
-## Ce qui a été corrigé
+## Pour plus de détailles
 
 ### 1. Variables de fuite retirées du modèle
 Les colonnes suivantes sont **exclues** de l'entraînement :
