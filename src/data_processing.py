@@ -4,7 +4,7 @@ Pipeline de prétraitement — Greffe de moelle osseuse pédiatrique
 """
  
 import pandas as pd
-import numpy as np
+import numpy as np 
 from pathlib import Path
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import LabelEncoder
