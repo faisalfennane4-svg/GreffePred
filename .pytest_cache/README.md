@@ -65,7 +65,7 @@ streamlit run app/app.py
 | Champ | Valeur |
 |-------|--------|
 | Utilisateur | `medecin` |
-| Mot de passe | `demo1234` |
+| Mot de passe | `Greffe2026!` |
 
 ---
 
