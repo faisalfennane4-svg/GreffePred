@@ -1,4 +1,4 @@
-[  
+[    
   "tests/test_data_processing.py::test_build_training_data_has_no_target_in_features",
   "tests/test_data_processing.py::test_dataset_quality_summary_mentions_removed_columns",
   "tests/test_data_processing.py::test_derived_features_are_recomputed",
