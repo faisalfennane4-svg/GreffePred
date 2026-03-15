@@ -1,6 +1,6 @@
 """
 Package app
- 
+
 Interface Streamlit pour la prédiction du succès
 des greffes de moelle osseuse pédiatriques.
 """ 
