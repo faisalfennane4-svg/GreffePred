@@ -1,8 +1,8 @@
 """
 Journalisation des prédictions dans un fichier Excel.
 """
- 
-from __future__ import annotations 
+
+from __future__ import annotations
 
 from datetime import datetime
 from pathlib import Path
