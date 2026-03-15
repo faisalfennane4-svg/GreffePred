@@ -16,6 +16,7 @@ from src.data_processing import (
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "bone_marrow.csv"
 
 
+
 def test_prepare_model_dataframe_removes_leakage_columns():
     raw_df = pd.read_csv(DATA_PATH, na_values=["?"])
     prepared_df = prepare_model_dataframe(raw_df)
