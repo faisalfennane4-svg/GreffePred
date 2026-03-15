@@ -1,1 +1,75 @@
- 
+{
+  "rows": 187,
+  "columns_before_cleaning": 37,
+  "columns_used_for_model": 28,
+  "leakage_columns_removed": [
+    "IIIV",
+    "Relapse",
+    "aGvHDIIIIV",
+    "extcGvHD",
+    "ANCrecovery",
+    "PLTrecovery",
+    "time_to_aGvHD_III_IV",
+    "survival_time"
+  ],
+  "target_distribution_percent": {
+    "0": 54.55,
+    "1": 45.45
+  },
+  "columns_with_missing_values": {
+    "extcGvHD": 31,
+    "CMVstatus": 16,
+    "RecipientCMV": 14,
+    "CD3dCD34": 5,
+    "CD3dkgx10d8": 5,
+    "RecipientRh": 2,
+    "Rbodymass": 2,
+    "DonorCMV": 2,
+    "RecipientABO": 1,
+    "Alel": 1,
+    "ABOmatch": 1,
+    "Antigen": 1
+  },
+  "features_used": [
+    "Recipientgender",
+    "Stemcellsource",
+    "Donorage",
+    "Donorage35",
+    "Gendermatch",
+    "DonorABO",
+    "RecipientABO",
+    "RecipientRh",
+    "ABOmatch",
+    "CMVstatus",
+    "DonorCMV",
+    "RecipientCMV",
+    "Disease",
+    "Riskgroup",
+    "Txpostrelapse",
+    "Diseasegroup",
+    "HLAmatch",
+    "HLAmismatch",
+    "Antigen",
+    "Alel",
+    "HLAgrI",
+    "Recipientage",
+    "Recipientage10",
+    "Recipientageint",
+    "CD34kgx10d6",
+    "CD3dCD34",
+    "CD3dkgx10d8",
+    "Rbodymass"
+  ],
+  "best_model": "RandomForest",
+  "best_model_metrics": {
+    "model_name": "RandomForest",
+    "roc_auc_mean": 0.5522689075630252,
+    "roc_auc_std": 0.04839857910290085,
+    "accuracy_mean": 0.5613086770981508,
+    "balanced_accuracy_mean": 0.5512184873949579,
+    "f1_mean": 0.47054350914195187
+  },
+  "model_artifact": "best_model.joblib",
+  "comparison_artifact": "model_comparison.csv",
+  "feature_count": 28
+}
