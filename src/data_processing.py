@@ -143,5 +143,17 @@ def preprocess_pipeline(path=None, use_smote: bool = True):
         X, y = apply_smote(X, y)
 
     return X, y, feature_names, encoders
+ MODEL_FEATURE_COLUMNS = [
+    'Recipientgender', 'Stemcellsource', 'Donorage', 'Donorage35',
+    'IIIV', 'Gendermatch', 'DonorABO', 'RecipientABO', 'RecipientRh',
+    'ABOmatch', 'CMVstatus', 'DonorCMV', 'RecipientCMV', 'Disease',
+    'Riskgroup', 'Txpostrelapse', 'Diseasegroup', 'HLAmatch',
+    'HLAmismatch', 'Antigen', 'Alel', 'HLAgrI', 'Recipientage',
+    'Recipientage10', 'Recipientageint', 'Relapse', 'aGvHDIIIIV',
+    'extcGvHD', 'CD34kgx10d6', 'CD3dkgx10d8', 'CD3dCD34',
+    'Rbodymass', 'ANCrecovery', 'PLTrecovery',
+    'time_to_aGvHD_III_IV', 'survival_time'
+]
+ 
 
 
