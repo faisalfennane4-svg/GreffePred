@@ -35,5 +35,5 @@ def test_select_best_model_returns_first_row_name():
             {"model_name": "A", "roc_auc_mean": 0.7, "balanced_accuracy_mean": 0.6, "accuracy_mean": 0.6},
             {"model_name": "B", "roc_auc_mean": 0.6, "balanced_accuracy_mean": 0.7, "accuracy_mean": 0.7},
         ]
-    )
+    ) 
     assert select_best_model(sample_results) == "A"
