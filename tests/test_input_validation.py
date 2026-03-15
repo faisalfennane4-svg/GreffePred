@@ -2,7 +2,7 @@ from src.input_validation import validate_input_record
 
  
 def valid_record():
-    return {
+    return { 
         "PatientID": "DOS-01",
         "ClinicalNote": "",
         "Recipientgender": 1,
