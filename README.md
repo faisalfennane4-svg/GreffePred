@@ -6,7 +6,7 @@
 ![Plotly](https://img.shields.io/badge/Plotly-5.18+-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
  
 **Prédiction du succès des greffes de moelle osseuse pédiatriques** 
-
+ 
 Machine Learning · SHAP · Interface Médicale Streamlit
 
 Ecole Centrale Casablanca — Coding Week — Mars 2026
