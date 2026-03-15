@@ -1,5 +1,5 @@
 from src.input_validation import validate_input_record
-
+ 
  
 def valid_record():
     return { 
