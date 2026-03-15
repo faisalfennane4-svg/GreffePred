@@ -5,7 +5,7 @@ Pour rester lisible, l'explication est faite par **petits blocs de lignes** plut
 Chaque bloc correspond à quelques lignes contiguës qui travaillent ensemble.
 
 ---
-
+ 
 ## 1. `src/data_processing.py`
 
 ### Lignes 1 à 8
