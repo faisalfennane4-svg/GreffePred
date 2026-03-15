@@ -1,5 +1,5 @@
 from pathlib import Path
-
+ 
 from src.prediction_logger import append_prediction, initialize_workbook, read_history
     
 def sample_raw_inputs(): 
