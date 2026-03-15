@@ -2,9 +2,9 @@
 src/data_processing.py
 Pipeline de prétraitement — Greffe de moelle osseuse pédiatrique
 """
- 
+
 import pandas as pd
-import numpy as np 
+import numpy as np
 from pathlib import Path
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import LabelEncoder
@@ -143,7 +143,9 @@ def preprocess_pipeline(path=None, use_smote: bool = True):
         X, y = apply_smote(X, y)
 
     return X, y, feature_names, encoders
- MODEL_FEATURE_COLUMNS = [
+
+
+MODEL_FEATURE_COLUMNS = [
     'Recipientgender', 'Stemcellsource', 'Donorage', 'Donorage35',
     'IIIV', 'Gendermatch', 'DonorABO', 'RecipientABO', 'RecipientRh',
     'ABOmatch', 'CMVstatus', 'DonorCMV', 'RecipientCMV', 'Disease',
@@ -154,6 +156,3 @@ def preprocess_pipeline(path=None, use_smote: bool = True):
     'Rbodymass', 'ANCrecovery', 'PLTrecovery',
     'time_to_aGvHD_III_IV', 'survival_time'
 ]
- 
-
-
