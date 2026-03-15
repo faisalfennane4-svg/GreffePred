@@ -12,7 +12,7 @@ Machine Learning · SHAP · Interface Médicale Streamlit
 Ecole Centrale Casablanca — Coding Week — Mars 2026
 
 ---
-
+ 
 ## Equipe
 
 | Nom | Prénom |
