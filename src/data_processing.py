@@ -166,11 +166,41 @@ def _disease_group(disease: Any) -> float:
 
 def load_data(path: str | Path | None = None) -> pd.DataFrame:
     """
-    Charge le CSV et nettoie les marqueurs de valeurs manquantes.
+    Charge le dataset ARFF et le convertit en DataFrame pandas.
     """
     source_path = Path(path) if path is not None else DEFAULT_DATA_PATH
-    df = pd.read_csv(source_path, na_values=MISSING_TOKENS)
-    df.columns = [column.strip() for column in df.columns]
+
+    with open(source_path, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    # récupérer les noms de colonnes
+    columns = []
+    data_start = 0
+
+    for i, line in enumerate(lines):
+        line = line.strip()
+
+        if line.lower().startswith("@attribute"):
+            parts = line.split()
+            columns.append(parts[1])
+
+        if line.lower() == "@data":
+            data_start = i + 1
+            break
+
+    # lire les données après @data
+    data_lines = lines[data_start:]
+
+    from io import StringIO
+
+    df = pd.read_csv(
+        StringIO("".join(data_lines)),
+        header=None,
+        na_values=MISSING_TOKENS
+    )
+
+    df.columns = columns
+
     return df
 
 
