@@ -201,7 +201,7 @@ Ecole Centrale Casablanca — Coding Week — Mars 2026 — Projet 4
 ## Guide d'utilisation
 
 ### Etape 1 — Connexion
-Lancez l'application et connectez-vous avec les identifiants medecin / demo1234.
+Lancez l'application et connectez-vous avec l'identifiant medecin (mot de passe : Greffe2026!).
 
 ### Etape 2 — Saisie du dossier clinique
 Dans la barre laterale gauche, remplissez les informations du patient reparties en 5 sections :
