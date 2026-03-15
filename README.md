@@ -136,6 +136,7 @@ GreffePred/
 ├── README.md
 ├── CORRECTIONS_APPLIQUEES.md
 └── EXPLICATION_DETAILLEE.md
+└── Certains fichiers ont été déplacés hors de leur dossier d'origine suite à des problèmes techniques rencontrés lors du développement.
 ```
 
 ---
