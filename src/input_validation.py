@@ -5,7 +5,7 @@ Cette couche évite deux problèmes :
 - les valeurs impossibles,
 - les valeurs très aberrantes qui rendraient la prédiction peu crédible.
 """
-
+ 
 from __future__ import annotations
 
 from typing import Any
