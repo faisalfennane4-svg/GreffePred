@@ -180,3 +180,7 @@ FRIENDLY_FEATURE_NAMES = {
     "time_to_aGvHD_III_IV": "Time to Acute GvHD (days)",
     "survival_time": "Survival Time (days)",
 }
+
+
+def humanize_transformed_feature_name(name: str) -> str:
+    return FRIENDLY_FEATURE_NAMES.get(name, name.replace("_", " ").title())
