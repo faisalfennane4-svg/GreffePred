@@ -1,5 +1,5 @@
 """
-Validation des entrées utilisateur.
+Validation des entrées utilisateur. 
 
 Cette couche évite deux problèmes :
 - les valeurs impossibles,
