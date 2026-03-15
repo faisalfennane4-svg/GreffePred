@@ -11,7 +11,7 @@
     "PLTrecovery",
     "time_to_aGvHD_III_IV",
     "survival_time"
-  ],
+  ], 
   "target_distribution_percent": {
     "0": 54.55,
     "1": 45.45
