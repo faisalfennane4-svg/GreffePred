@@ -6,7 +6,6 @@ Le point important de cette version est de séparer clairement :
 2) les variables dérivées calculées automatiquement,
 3) les variables de fuite d'information qui doivent être exclues du modèle.
 """
- 
 from __future__ import annotations
 
 from pathlib import Path
