@@ -1,7 +1,7 @@
 pandas>=2.2
 numpy>=2.2
 scikit-learn>=1.8
-streamlit>=1.32 
+streamlit>=1.32
 plotly>=5.18
 matplotlib>=3.8
 shap>=0.45
