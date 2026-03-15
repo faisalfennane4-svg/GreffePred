@@ -46,7 +46,7 @@ GreffePred est une application d'aide à la décision clinique destinée aux mé
 ### Prérequis
 - Python 3.9+
 
-🖥️ Méthode 1 — Via le Terminal (local)
+# 🖥️ Méthode 1 — Via le Terminal (local)
 markdown## 🖥️ Lancement en local
 
 ### Prérequis
@@ -70,7 +70,7 @@ streamlit run app/app.py
 
 L'interface s'ouvre automatiquement sur : http://localhost:8501
 
-☁️ Méthode 2 — Via GitHub Codespaces (sans installation)
+# ☁️ Méthode 2 — Via GitHub Codespaces (sans installation)
 markdown## ☁️ Lancement via GitHub Codespaces
 
 > ✅ Aucune installation requise — tout se fait dans le navigateur !
