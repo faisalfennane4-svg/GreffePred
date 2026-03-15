@@ -98,37 +98,44 @@ streamlit run app/app.py
 
 ```
 GreffePred/
+│
 ├── .github/
 │   └── workflows/
-│       └── ci.yml
+│       └── ci.yml              # Pipeline CI/CD automatique
+│
 ├── app/
-│   └── app.py
-├── src/
-│   ├── data_processing.py
-│   ├── input_validation.py
-│   ├── prediction_logger.py
-│   └── train_model.py
+│   ├── __init__.py
+│   └── app.py                  # Interface Streamlit principale
+│
 ├── data/
-│   ├── bone_marrow.csv
-│   ├── bone-marrow.arff
-│   ├── best_model.joblib
-│   ├── model_comparison.csv
-│   ├── global_feature_importance.csv
-│   ├── background_reference.csv
-│   ├── training_summary.json
-│   └── user_predictions.xlsx
+│   ├── bone_marrow.csv         # Dataset principal
+│   ├── bone-marrow.arff        # Dataset format ARFF
+│   ├── best_model.joblib       # Modèle entraîné sauvegardé
+│   ├── model_comparison.csv    # Comparaison des modèles
+│   ├── global_feature_importance.csv  # Importance des variables
+│   ├── background_reference.csv       # Référence SHAP
+│   ├── training_summary.json   # Résumé de l'entraînement
+│   └── user_predictions.xlsx   # Historique des prédictions
+│
+├── src/
+│   ├── __init__.py
+│   ├── data_processing.py      # Traitement des données
+│   ├── input_validation.py     # Validation des entrées
+│   ├── prediction_logger.py    # Journalisation des prédictions
+│   └── train_model.py          # Entraînement du modèle
+│
 ├── tests/
+│   ├── __init__.py
 │   ├── test_data_processing.py
 │   ├── test_input_validation.py
 │   ├── test_model_selection.py
 │   └── test_prediction_logger.py
-├── __pycache__/
-├── .pytest_cache/
-├── conftest.py
-├── Dockerfile
-├── requirements.txt
+│
+├── Dockerfile                  # Conteneurisation Docker
+├── requirements.txt            # Dépendances Python
 ├── README.md
-└── .gitignore
+├── CORRECTIONS_APPLIQUEES.md
+└── EXPLICATION_DETAILLEE.md
 ```
 
 ---
