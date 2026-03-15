@@ -1,5 +1,5 @@
 {
-  "rows": 187,
+  "rows": 187,  
   "columns_before_cleaning": 37,
   "columns_used_for_model": 28,
   "leakage_columns_removed": [
