@@ -11,7 +11,7 @@
 - ajout de tests de journalisation Excel ;
 - ajout d'une vue analytique du modèle ;
 - ajout d'une courbe de sensibilité sur l'âge du receveur.
-
+ 
 ## Artefacts générés
 - `data/best_model.joblib`
 - `data/model_comparison.csv`
