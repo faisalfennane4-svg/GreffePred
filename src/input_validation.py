@@ -2,7 +2,7 @@
 Validation des entrées utilisateur. 
 
 Cette couche évite deux problèmes :
-- les valeurs impossibles,
+- les valeurs impossibles,  
 - les valeurs très aberrantes qui rendraient la prédiction peu crédible.
 """
 
