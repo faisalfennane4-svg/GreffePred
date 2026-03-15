@@ -872,5 +872,4 @@ Puis :
 - analyser
 - vérifier le résultat
 - consulter l'historique Excel
-
 ---
