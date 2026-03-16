@@ -7,7 +7,7 @@
   
 **Prédiction du succès des greffes de moelle osseuse pédiatriques** 
  
-Machine Learning · SHAP · Interface Médicale Streamlit
+Machine Learning · SHAP · Interface Médicale Streamlit  
   
 Ecole Centrale Casablanca — Coding Week — Mars 2026
   
