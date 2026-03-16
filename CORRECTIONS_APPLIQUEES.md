@@ -1,5 +1,5 @@
 # Corrections appliquées
-
+  
 ## Problèmes corrigés
 - suppression des variables de fuite clinique ;
 - suppression de la saisie manuelle des variables dérivées ;
