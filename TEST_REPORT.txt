@@ -6,7 +6,7 @@ rootdir: /mnt/data/greffepred_refonte
 plugins: json-report-1.5.0, cov-7.0.0, Faker-40.1.2, metadata-3.1.1, anyio-4.12.1, ddtrace-4.4.0, asyncio-1.3.0
 asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
 [1mcollecting ... [0mcollected 14 items  
-
+ 
 tests/test_data_processing.py::test_prepare_model_dataframe_removes_leakage_columns [32mPASSED[0m[32m [  7%][0m
 tests/test_data_processing.py::test_derived_features_are_recomputed [32mPASSED[0m[32m [ 14%][0m
 tests/test_data_processing.py::test_make_prediction_frame_has_expected_columns [32mPASSED[0m[32m [ 21%][0m
