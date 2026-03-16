@@ -3,7 +3,7 @@
 ## Problèmes corrigés
 - suppression des variables de fuite clinique ;
 - suppression de la saisie manuelle des variables dérivées ;
-- ajout d'une connexion médecin ; 
+- ajout d'une connexion médecin ;
 - ajout d'un historique Excel ;
 - ajout de tests sur les aberrations de saisie ;
 - ajout de tests de sélection de modèle ; 
