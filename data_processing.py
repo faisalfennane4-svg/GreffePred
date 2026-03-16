@@ -1,5 +1,5 @@
 """
-Préparation des données pour GreffePred.
+Préparation des données pour GreffePred. 
 
 Le point important de cette version est de séparer clairement :
 1) les variables que le médecin peut saisir avant la greffe,
