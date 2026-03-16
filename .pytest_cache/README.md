@@ -8,7 +8,7 @@
 **Prédiction du succès des greffes de moelle osseuse pédiatriques**
 
 Machine Learning · SHAP · Interface Médicale Streamlit
-
+  
 Ecole Centrale Casablanca — Coding Week — Mars 2026
  
 ---
@@ -43,22 +43,48 @@ GreffePred est une application d'aide à la décision clinique destinée aux mé
 
 ## Installation et Lancement
 
-### Prérequis
-- Python 3.9+
+## 🖥️ Méthode 1 — Via le Terminal (local)
+markdown## 🖥️ Lancement en local
 
-### Etape 1 — Installer les dépendances
+### Prérequis
+- Python 3.x installé
+- Git installé
+
+### Étapes
+```bash
+# 1. Cloner le projet
+git clone https://github.com/faisalfennane4-svg/GreffePred.git
+
+# 2. Aller dans le dossier
+cd GreffePred
+
+# 3. Installer les dépendances
+pip install -r requirements.txt
+
+# 4. Lancer l'application
+streamlit run app/app.py
+```
+
+L'interface s'ouvre automatiquement sur : http://localhost:8501
+
+## ☁️ Méthode 2 — Via GitHub Codespaces (sans installation)
+markdown## ☁️ Lancement via GitHub Codespaces
+
+> ✅ Aucune installation requise — tout se fait dans le navigateur !
+
+### Étapes
+
+1. Aller sur le dépôt : https://github.com/faisalfennane4-svg/GreffePred
+2. Cliquer sur le bouton vert **`<> Code`**
+3. Cliquer sur l'onglet **`Codespaces`**
+4. Cliquer sur **`Create codespace on main`**
+5. Dans le terminal qui s'ouvre, taper :
 ```bash
 pip install -r requirements.txt
-```
-
-### Etape 2 — Entraîner le modèle
-```bash
-python src/train_model.py
-```
-
-### Etape 3 — Lancer l'application
-```bash
 streamlit run app/app.py
+```
+
+6. Cliquer sur **`Open in Browser`** quand Codespaces le propose
 ```
 
 ### Connexion
