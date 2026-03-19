@@ -180,7 +180,7 @@ def read_history(path: str | Path = DEFAULT_LOG_PATH, limit: int = 50) -> pd.Dat
     Recharge l'historique pour affichage dans Streamlit.
     """
     log_path = initialize_workbook(path)
-    df = pd.read_excel(log_path, sheet_name="predictions")
+    df = pd.read_excel(log_path, sheet_name="predictions", engine="openpyxl")
     if df.empty:
         return df
     return df.sort_values("timestamp", ascending=False).head(limit).reset_index(drop=True)
