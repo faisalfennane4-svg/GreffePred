@@ -1,5 +1,5 @@
 Recipientgender,Stemcellsource,Donorage,Donorage35,Gendermatch,DonorABO,RecipientABO,RecipientRh,ABOmatch,CMVstatus,DonorCMV,RecipientCMV,Disease,Riskgroup,Txpostrelapse,Diseasegroup,HLAmatch,HLAmismatch,Antigen,Alel,HLAgrI,Recipientage,Recipientage10,Recipientageint,CD34kgx10d6,CD3dCD34,CD3dkgx10d8,Rbodymass
-1,1,27.780823,0.0,0,1,0.0,1.0,1.0,0.0,0.0,0.0,chronic,0,0,1.0,1,1.0,1.0,0.0,1,8.0,0.0,1.0,15.41,8.07777,1.91,24.0
+1,1,27.780823,0.0,0,1,0.0,1.0,1.0,0.0,0.0,0.0,chronic,0,0,1.0,1,1.0,1.0,0.0,1,8.0,0.0,1.0,15.41,8.07777,1.91,24.0 
 1,0,21.263014,0.0,0,-1,0.0,1.0,1.0,2.0,0.0,1.0,ALL,0,0,1.0,0,0.0,-1.0,-1.0,0,7.4,0.0,1.0,3.53,4.184092,0.84,26.5
 1,1,31.19452,0.0,0,2,0.0,1.0,1.0,3.0,1.0,1.0,nonmalignant,0,0,0.0,2,1.0,1.0,1.0,4,1.8,0.0,0.0,57.78,11.017048,5.24,8.15
 1,1,46.00274,1.0,0,-1,0.0,1.0,1.0,,1.0,,lymphoma,1,0,1.0,2,1.0,2.0,0.0,4,18.8,1.0,2.0,1.64,9.456741,0.17,103.4 
